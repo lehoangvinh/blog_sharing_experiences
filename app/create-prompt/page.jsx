@@ -28,7 +28,7 @@ const page = () => {
         }),
       });
       if (response.ok) {
-        router.push("/");
+        router.push("/profile");
       }
     } catch (error) {
       console.log("🚀 ~ file: page.jsx:27 ~ createPropmt ~ error:", error);

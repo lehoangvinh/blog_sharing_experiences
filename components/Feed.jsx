@@ -25,11 +25,15 @@ const Feed = () => {
       const response = await fetch("/api/prompt");
       const data = await response.json();
       setPosts(data);
-    } catch (error) {}
+    } catch (error) {
+      console.log("🚀 ~ file: Feed.jsx:29 ~ fetchPosts ~ error:", error);
+    }
   };
   useEffect(() => {
     fetchPosts();
   }, []);
+
+  //
   return (
     <section className="feed">
       <form className="relative w-full flex-center "></form>
